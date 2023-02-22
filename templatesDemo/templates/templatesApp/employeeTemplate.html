@@ -1,14 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Template</title>
+    <title>Employee Information</title>
     <link rel="stylesheet" href="{% static 'css/emp.css'%}">
 </head>
 <body>
-    <h1>Templates in action from MVT!!</h1>
-    {{name}}
+    <h1>Employee Details:</h1>
+    <ol>
+    <li>Id: {{id}}</li>
+    <li>Name: {{name}}</li>
+    <li>Salary: {{salary}}</li>
+</ol>
+<img src="{%static 'images/download.jpeg'%}" alt="">
 </body>
 </html>
