@@ -8,3 +8,18 @@ The django can render on the UI using DTL(Django template library). In the templ
 
 ### Static Files
 To set up static files create a static files directory right under your project directory. Then in find the static variable and under that create a STATICFILES_DIRS variable and in the list add the directory for the static files. To load static files and use them in a template at the beginning of the file put the {% static %} tag. To load the specific file directory use {% static 'path to file' %} when provided the path provide it like you are already in the static directory.
+
+### Database
+The first step in setting up a database in django is to go to settings.py and go to the database variable and make apporiate connection based on the database. More info here : https://docs.djangoproject.com/en/4.1/ref/databases/. <br>
+Then create models in the models.py file. The models are the tables in the database. The models are created by creating a class and inheriting from the models.Model class. Then create the fields for the model. The fields are the columns in the table. The fields are created by creating a variable and setting it equal to the field type. <br>
+After you have updated the models.py file to create the migrations for the models run command : 
+```
+python manage.py makemigrations
+```
+To migrate the models to the database run: 
+```
+python manage.py migrate
+```
+### Django Orm
+The django orm can be used to query the database. To query the database use the model name and then the field name. To get all the objects in the database use the model name and then the all() function. There are many other functions that can be used to query the database. A link to the documentation is here : https://docs.djangoproject.com/en/4.1/topics/db/queries/. <br>
+Django orm has some various process to filter gt(greater than), gte(greater than or equal to), lt(less than), lte(less than or equal to), contains(contains the string), startswith(starts with the string), endswith(ends with the string), in(contains the value), and range(contains the range of values). <br>
