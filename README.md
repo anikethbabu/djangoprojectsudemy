@@ -23,3 +23,5 @@ python manage.py migrate
 ### Django Orm
 The django orm can be used to query the database. To query the database use the model name and then the field name. To get all the objects in the database use the model name and then the all() function. There are many other functions that can be used to query the database. A link to the documentation is here : https://docs.djangoproject.com/en/4.1/topics/db/queries/. <br>
 Django orm has some various process to filter gt(greater than), gte(greater than or equal to), lt(less than), lte(less than or equal to), contains(contains the string), startswith(starts with the string), endswith(ends with the string), in(contains the value), and range(contains the range of values). <br>
+Using values_list,values, or only function you can get the values of multiple fields in a database. Only by default also provides the id field. 
+Using aggregate Function you can get the aggregate values of the fields. Aggregate functions are count, max, min, avg, and sum. <br>
